@@ -1,3 +1,8 @@
+'''
+方法一会超时
+方法二效率更高
+'''
+
 from pprint import pprint
 
 
