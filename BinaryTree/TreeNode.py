@@ -20,20 +20,20 @@ class BinaryTree:
         for k in range(1, l):
             tmp = []
             for kk, n in enumerate(nodes):
-                left = TreeNode(A[k][2*kk])
-                right = TreeNode(A[k][2*kk+1])
-                n.left = left
-                n.right = right
+                left = TreeNode(A[k][2*kk]) if A[k][2*kk] else None
+                right = TreeNode(A[k][2*kk+1]) if A[k][2*kk+1] else None
+                if n:
+                    n.left = left
+                    n.right = right
                 tmp.append(left)
                 tmp.append(right)
             nodes = tmp
         self.root = root
 
-from printBinaryTree import Solution
 
 if __name__ == '__main__':
     s = Solution()
-    tree = BinaryTree([[0], [1, 2], [3,4,' ',6]])
+    tree = BinaryTree([[1], [None, 2]])
     tree.root.printTreeFrom()
         
         
