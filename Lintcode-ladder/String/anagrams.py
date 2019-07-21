@@ -1,3 +1,17 @@
+"""
+Description
+Given an array of strings, return all groups of strings that are anagrams.
+All inputs will be in lower-case
+
+Example
+Given ["lint", "intl", "inlt", "code"], return ["lint", "inlt", "intl"].
+Given ["ab", "ba", "cd", "dc", "e"], return ["ab", "ba", "cd", "dc"].
+
+Challenge
+What is Anagram?
+Two strings are anagram if they can be the same after change the order of characters.
+"""
+
 '''
 因为要将 anagram 选取出来，必然需要相互比较。
 在 valid anagram 中提到了两个方法，这里用第二种，排序的方法较为简便。

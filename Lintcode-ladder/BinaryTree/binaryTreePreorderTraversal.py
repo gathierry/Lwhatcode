@@ -27,6 +27,36 @@ class Solution:
                 tn = top.right
         return res
         
+    def preorderTraversal1(self, root):
+        # write your code here
+        res = []
+        if root is None:
+            return res
+        st = [root]
+        while st:
+            tn = st.pop()
+            res.append(tn.val)
+            if tn.right:
+                st.append(tn.right)
+            if tn.left:
+                st.append(tn.left)
+        return res
+        
+    def preorderTraversalRecur(self, root, res):
+        res.append(root.val)
+        if root.left:
+            self.preorderTraversalRecur(root.left, res)
+        if root.right:
+            self.preorderTraversalRecur(root.right, res)
+        
+    def preorderTraversal2(self, root):
+        res = []
+        if root:
+            self.preorderTraversalRecur(root, res)
+        return res
+
+#---------------------------------------------------------------------------------------       
+    
     def inorderTraversal(self, root):
         # write your code here
         st = []
@@ -42,6 +72,20 @@ class Solution:
                 tn = top.right
         return res
         
+    def inorderTraversalRecur(self, root, res):
+        if root.left:
+            self.inorderTraversalRecur(root.left, res)
+        res.append(root.val)
+        if root.right:
+            self.inorderTraversalRecur(root.right, res)
+        
+    def inorderTraversal2(self, root):
+        res = []
+        if root:
+            self.inorderTraversalRecur(root, res)
+        return res
+        
+#---------------------------------------------------------------------------------------           
     def postorderTraversal(self, root):
         # write your code here
         st = []
@@ -76,7 +120,8 @@ if __name__ == '__main__':
     s = Solution()
     tree = BinaryTree([[1], [2, 3], [4, 5, None, None]])
     tree = BinaryTree([[1], [2, 3], [4, None, None, 5], [None, 6, None, None, None, None, None, None], [None, None, 7, 8, None, None, None, None, None, None, None, None, None, None, None, None]])
-    print(s.preorderTraversal(tree.root))
+    print(s.inorderTraversal(tree.root))
+    print(s.inorderTraversal2(tree.root))
         
         
         

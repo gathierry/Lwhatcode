@@ -1,3 +1,16 @@
+"""
+Description
+Given two strings, find the longest common substring.
+Return the length of it.
+The characters in substring should occur continuously in original string. This is different with subsequence.
+
+Example
+Given A = "ABCD", B = "CBCE", return 2.
+
+Challenge
+O(n x m) time and memory.
+"""
+
 '''
 考虑时间和空间复杂度都为 O(mxn) 的解法
 对于字符串 s t

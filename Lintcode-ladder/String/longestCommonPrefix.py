@@ -1,3 +1,12 @@
+"""
+Description
+Given k strings, find the longest common prefix (LCP).
+
+Example
+For strings "ABCD", "ABEF" and "ACEF", the LCP is "A"
+For strings "ABCDEFG", "ABCEFG" and "ABCEFA", the LCP is "ABC"
+"""
+
 '''
 暴力算法即可，注意最长前缀长度不可能大于最短字符串
 '''
